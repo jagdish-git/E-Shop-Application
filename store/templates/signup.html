@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="p-3 m-3">
+            <div class="col-lg-4 mx-auto border rounded pt-4">
+
+                    <h2 class="alert alert-secondary border center rounded p-1 m-2">&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;SignUp Here</h2>
+            <form action="/shop/signup/" method="POST">
+                {% csrf_token %}
+                {% if error %}
+                <div class="alert alert-danger border rounded p-1 m-2" role="alert">
+                  <strong>{{error}}</strong>
+                </div>
+                {% endif %}
+                <!-- First Name -->
+                <div class="form-group form-control-sm">
+                  <label for="">First Name</label>
+                  <input value="{{values.first_name}}" type="text" name="firstname" id="" class="form-control">
+                </div>
+                <!-- Sur Name -->
+                <div class="form-group form-control-sm">
+                  <label for="">Last Name</label>
+                  <input value="{{values.last_name}}" type="text" name="lastname" id="" class="form-control">
+                </div>
+                <!-- Phone Number -->
+                <div class="form-group form-control-sm">
+                    <label for="">Phone</label>
+                    <input value="{{values.phone}}" type="text" name="phone" id="" class="form-control" placeholder="9988****66">
+                </div>
+                <!-- Email -->
+                <div class="form-group form-control-sm">
+                  <label for="">Email</label>
+                  <input value="{{values.email}}" type="email" name="email" id="" class="form-control" placeholder="example@gmail.com">
+                </div>
+                <!--Password -->
+                <div class="form-group form-control-sm">
+                  <label for="">Password</label>
+                  <input type="password" name="password" id="" class="form-control" placeholder="********">
+                </div>
+                <!-- submit Button -->
+                <div class="form-group form-control-sm mt-2">
+                    <input class="btn btn-info" type="submit" value="Create Account">
+                </div>
+
+            </form>
+            </div>     
+        </div>
+    </div>
+
+
+{% endblock %}

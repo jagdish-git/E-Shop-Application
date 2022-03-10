@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="withoutrestm123.testapp.models.Zigu.objects" />
+          <option value="withoutrestm123.testapp.models.Zigu.DoesNotExist" />
+          <option value="withoutrestm123.testapp.models.Zigu.get_objects_by_id" />
+          <option value="apikey.testapp.models.Apikey.objects" />
+          <option value="PyPDF2" />
+          <option value="pyttsx3" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
